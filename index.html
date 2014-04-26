@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" data-ng-app="app">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,18 +13,26 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
     </head>
-    <body>
+    <body data-ng-controller="mainCtrl">
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <p>Hello world! This is HTML5 / AngularJS / Require Boilerplate.</p>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.6/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.6/angular-route.min.js"></script>
+        <script>window.angular || document.write('<script src="js/vendor/angular-1.3.0-beta.6.min.js"><\/script>')</script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+        <script>window.require || document.write('<script src="js/vendor/angular-2.1.11.min.js"><\/script>')</script>
+        <script src="js/depends.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <ng-view></ng-view>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
